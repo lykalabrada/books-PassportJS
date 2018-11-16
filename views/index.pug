@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1 #{title}
+  if books.length > 0
+    ul.list-group
+      each book, i in books
+        li.list-group-item
+          a(href="/books/"+book._id)= book.title
+  else
+    span No Books in the record.

@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST', action='/books/add')
+    .form-group
+      label Title:
+      input.form-control(name='title',type='text')
+    .form-group
+      label Gist:
+      textarea.form-control(name='gist')
+    br
+    input.btn.btn-primary(type='submit', value='Submit')
